@@ -1,0 +1,421 @@
+$font : 'Gothic A1', sans-serif;
+$lineheigh: 1.8;
+@mixin button{
+    text-decoration: none;
+    padding: 0.6em 3%;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 400;
+}
+@mixin button_hover{
+    background-color: white;
+    color: black;
+}
+body{
+    font-family: $font;
+    font-weight: 400;
+    font-size: 65.2%;
+}
+.hidden{
+    position: absolute;
+    font-size: 0;
+    overflow: hidden;
+}
+///////////////////////////////////////////////////////////ABOUT // HEADER/////////////////////////////////////////////////////////////////////
+header{
+    background: url("../img/portefolio.jpg") no-repeat;
+    background-size: 100%;
+    max-width: 100%;
+    padding: 40em;
+    margin: initial;
+    position: relative;
+}
+
+.logo{
+    width: 8%;
+    height: auto;
+    position: absolute;
+    top: 50px;
+    left: 80px;
+}
+
+.about--nav ul{
+    position : absolute;
+    top: 0;
+    right: 100px;
+    width: 450px;
+    margin-top: 5em;
+}
+
+.about--nav li{
+    display: inline-block;
+    margin: 0.3em 2%;
+}
+
+.about--nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+.about--nav a:after{
+    content: '•';
+    margin-left: 1.3em;
+}
+.about--nav a:not(:last-child):after{
+    content: "";
+}
+.header__name{
+    font-size: 6em;
+    color:white;
+    position: absolute;
+    top: 300px;
+    left: 200px;
+    font-weight: 100;
+}
+.header__job{
+    font-size: 4em;
+    color:white;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 420px;
+    left: 315px;
+    font-weight: 700;
+}
+.header__button{
+    @include button;
+    background-color: white;
+    color: black;
+    font-size: 1.5em;
+    position: absolute;
+    top: 520px;
+    left: 360px;
+}
+.header__button:hover{
+    background-color: dimgrey;
+    color:white;
+}
+.active{
+    border-bottom: 2px solid white;
+    padding: 1em;
+}
+///////////////////////////////////////////////////////END_ABOUT // HEADER/////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////ABOUT // WHO AM I ? /////////////////////////////////////////////////////////////////
+.home__aboutme{
+    margin : 15em 0%;
+}
+.home__aboutme h1{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.5em;
+    margin-bottom: 0.7em;
+    text-align: center;
+}
+.home__aboutme--sndtitle{
+    font-family: 'Italianno', cursive;
+    font-size: 3.8em;
+    text-align: center;
+    margin-bottom: 1.3em;
+}
+.home__aboutme--text{
+    font-size: 1.8em;
+    line-height: 2;
+    color: dimgrey;
+    text-align: center;
+    width: 600px;
+    margin: 0 auto 1.5em;
+    font-weight: 400;
+}
+.home__aboutme--button{
+    @include button
+    font-size: 1.8em;
+    font-weight: 100;
+    display: block;
+    margin: 3em auto;
+    width: 90px;
+}
+.home__aboutme--button:hover{
+    @include button_hover;
+    background-color: dimgrey;
+}
+
+///////////////////////////////////////////////////////////END_ABOUT // WHO AM I ? ////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////ABOUT // RESUME/////////////////////////////////////////////////////////////////////
+.space__path{
+    background: url("../img/resume.png") right no-repeat;
+    background-size: 60%;
+    padding: 20em;
+    position: relative;
+    margin : 15em 12.8028125%;
+}
+
+.space__path p{
+    position: absolute;
+    top: 150px;
+    left: 0;
+    font-size: 2.3em;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+.space__path a{
+    @include button;
+    font-size: 1.8em;
+    position: absolute;
+    top: 235px;
+    left:150px;
+    font-weight: 100;
+}
+.space__path a:hover{
+    @include button_hover;
+    background-color: dimgrey;
+}
+
+///////////////////////////////////////////////////////END_ABOUT // RESUME/////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////ABOUT // HOBBIES/////////////////////////////////////////////////////////////////////
+.hobbies{
+    background-color: black;
+
+}
+
+.hobbies--margin{
+    margin : 15em 12.8028125%;
+    display: flex;
+    justify-content: space-between;
+    padding: 8em 0%;
+}
+.hobbies h1{
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-bottom: 1em;
+}
+.hobbies p{
+    width: 400px;
+    line-height: $lineheigh;
+    color: white;
+    padding-left: 4em;
+    font-size: 1.5em;
+    padding-bottom: 4em;
+}
+.hobbies ul{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    flex-wrap: wrap;
+    padding-bottom: 5em;
+    padding-top: 5em;
+}
+.hobbies li{
+    margin-left: 2em;
+    padding: 0em 2%;
+}
+.hobbies img{
+    width: 80px;
+    height: 80px;
+}
+.hobbies span{
+    font-family: 'Italianno', cursive;
+    text-transform: lowercase;
+    font-size: 1.8em;
+}
+////////////////////////////////////////////////////////////////////WORK // HEADER /////////////////////////////////////////////////////////////
+
+.work--header{
+    background-image: none;
+}
+
+.work--nav ul{
+    position : absolute;
+    top: 0;
+    right: 100px;
+    width: 450px;
+    margin-top: 5em;
+}
+
+.work--nav li{
+    display: inline-block;
+    margin: 0.3em 2%;
+}
+
+.work--nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+}
+
+.work--nav a:after{
+    content: '•';
+    margin-left: 1.3em;
+}
+.work--nav a:not(:last-child):after{
+    content: "";
+}
+.header--cat{
+    font-size: 20em;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: -0.8em;
+
+}
+.active--black{
+    border-bottom: 2px solid black;
+    padding: 1em;
+}
+
+////////////////////////////////////////////////////////////////END_WORK // HEADER /////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////WORK // LIST /////////////////////////////////////////////////////////////
+.work--list{
+    margin-top: -20em;
+}
+.work--list li:nth-child(odd){
+    background-color: rgba(1,1,1,0.2);
+    padding-left: 6%;
+}
+.work--list li:nth-child(odd) span{
+    color: white;
+}
+.work--list li:nth-child(even) span{
+    color: dimgrey;
+}
+.work--list li:nth-child(even){
+    padding-right: 6%;
+    text-align: right;
+    background-color: white;
+}
+.work--list li{
+    margin: 0em 0%;
+    padding: 8em 0%;
+}
+.work--list--cat{
+    font-family:'Allura', cursive;
+    font-size: 2em;
+}
+.work--list--name{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3em;
+    margin-top: 0.6em;
+}
+.work--list--text{
+    width: 500px;
+    font-size: 1.5em;
+    line-height: $lineheigh;
+    display: inline-block;
+    margin-top: 2em;
+}
+
+.pendu{
+    background: url("../img/1002pattes.jpg")right no-repeat;
+    background-size: 50%;
+}
+.cv{
+    background: url("../img/portefoliolaurieromagne.jpg")left no-repeat;
+    background-size: 50%;
+}
+.pattes{
+    background: url("../img/1002pattes.jpg")right no-repeat;
+    background-size: 50%;
+}
+.laurieanne{
+    background: url("../img/portefoliolaurieromagne.jpg")left no-repeat;
+    background-size: 50%;
+}
+////////////////////////////////////////////////////////////END_WORK // LIST /////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////CONTACT /////////////////////////////////////////////////////////////
+.header--cat--contact{
+    font-size: 15em;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    top: -80px;
+}
+
+.contact__info{
+    display: flex;
+    justify-content: space-between;
+    margin: 0em 12.8028125% 20em;
+    padding: 0em 8%;
+}
+
+.contact--flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__info h1{
+    font-size: 6em;
+    font-family: 'Italianno', cursive;
+    margin-bottom: 0.5em;
+}
+
+.contact__info p{
+    width: 350px;
+    font-size: 1.8em;
+    color: dimgrey;
+    margin-bottom: 1.5em;
+}
+
+.work--header.contact{
+    margin-bottom: -25em;
+}
+.contact--network{
+    display: flex;
+}
+
+.contact--network a{
+    text-decoration: none;
+    color: dimgrey;
+    margin: 0em 3%;
+}
+
+.contact--network img{
+    width: 30px;
+    height: 30px;
+    margin-top: 1em;
+}
+
+.contact--flex input, .contact--flex textarea{
+    border: 1px solid black;
+    margin-bottom: 1.5em;
+}
+
+.contact--flex input{
+    padding: 0.8em 30%;
+}
+
+.contact--flex label{
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-bottom: 0.5em;
+}
+
+.contact__info--border{
+    border-right: 1px solid black;
+    padding-right: 5%;
+}
+
+header:after{
+    content: '';
+    background: url("../img/phone.png") no-repeat;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 200px;
+    left: 0px;
+}
+
+.contact__info--img{
+    background: url("../img/phone.png") no-repeat;
+    background-size: 100%;
+    padding: 30em 0%;
+}
+
+///////////////////////////////////////////////////////////////END_CONTACT ///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////FOOTER ///////////////////////////////////////////////////////////////
